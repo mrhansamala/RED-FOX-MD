@@ -173,7 +173,7 @@ You will get pair code when you run the above replit. After scanning pair code y
 
  <br>
 <h2 align="center"> ⚠️ Warning ⚠️
-</h2>
+ </h2>
 
 📰Please read this 📰
 ```js  
