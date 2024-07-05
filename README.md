@@ -163,6 +163,14 @@ You will get pair code when you run the above replit. After scanning pair code y
     <br>
 <a href='https://toystack.ai' target="_blank"><img alt='Toystack-Ai' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=toystack-ai' width="96.35" height="28"/></a></p>
 
+#### DEPLOY TO Optiklink
+
+15. If You don't have a account in OptikLink. Create a account.
+    <br>
+<a href='https://optiklink.com' target="_blank"><img alt='OptikLinlk' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=optiklink' width="96.35" height="28"/></a></p>
+
+
+
 <p>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 
