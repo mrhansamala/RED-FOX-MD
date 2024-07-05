@@ -111,12 +111,13 @@ async function start() {
         const response = await fetch(pasteUrl);
         const text = await response.text();
         if (typeof text === 'string') {
-            fs.writeFileSync('../session/creds.json', text);
+            if (!fs.existsSync('../session/creds.json')) {
+            fs.writeFileSync('./session/creds.json', text);
             console.log('session file created');
             await start();
-        }
-    }
-
+       } else {
+                    console.log('session file already exists');
+                }
     // Response cmd pollMessage
     async function getMessage(key) {
         if (store) {
