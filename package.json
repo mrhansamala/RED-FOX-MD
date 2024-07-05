@@ -1,12 +1,11 @@
 {
   "name": "RED-FOX-MD",
   "version": "10.8.1",
-  "description": "RED-FOX-MD latest multi device whatsapp bot",
+  "description": "Ethix-MD latest multi device whatsapp bot",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name RED-FOX-MD"
   },
   "keywords": ["red-fox-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "mrhansamala",
