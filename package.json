@@ -1,17 +1,18 @@
 {
   "name": "RED-FOX-MD",
   "version": "10.8.1",
-  "description": "Ethix-MD latest multi device whatsapp bot",
+  "description": "RED-FOX-MD latest multi device whatsapp bot",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name RED-FOX-MD"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "keywords": ["red-fox-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "mrhansamala",
   "license": "ISC",
   "dependencies": {
-   "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@google/generative-ai": "^0.9.0",
     "@hapi/boom": "^10.0.1",
     "@whiskeysockets/baileys": "^6.7.5",
