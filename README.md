@@ -152,26 +152,26 @@ You will get pair code when you run the above replit. After scanning pair code y
 
 #### DEPLOY TO CLEVER-CLOUD
 
-15. If You don't have a account in Clever--Cloud. Create a account.
+17. If You don't have a account in Clever--Cloud. Create a account.
     <br>
 <a href='https://api.clever-cloud.com/v2/sessions/login' target="_blank"><img alt='Clever-Cloud' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=clever-cloud' width="96.35" height="28"/></a></p>
 
 
 #### DEPLOY TO Toystack-Ai
 
-15. If You don't have a account in Toystack-Ai. Create a account.
+18. If You don't have a account in Toystack-Ai. Create a account.
     <br>
 <a href='https://toystack.ai' target="_blank"><img alt='Toystack-Ai' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=toystack-ai' width="96.35" height="28"/></a></p>
 
 #### DEPLOY TO Optiklink
 
-15. If You don't have a account in OptikLink. Create a account.
+19. If You don't have a account in OptikLink. Create a account.
     <br>
 <a href='https://optiklink.com' target="_blank"><img alt='OptikLinlk' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=optiklink' width="96.35" height="28"/></a></p>
 
 #### DEPLOY TO Pylex>notes
 
-15. If You don't have a account in OptikLink. Create a account.
+20. If You don't have a account in OptikLink. Create a account.
     <br>
 <a href='https://pylexnodes.net/' target="_blank"><img alt='Pylex>notes' src='https://img.shields.io/badge/CREATE-h?color=black&style=for-the-badge&logo=pylexnotes' width="96.35" height="28"/></a></p>
 
