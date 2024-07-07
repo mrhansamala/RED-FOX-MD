@@ -32,8 +32,9 @@
 
 
 #### Fork the repo
+ <br>
+<p align="center"><a href="https://github.com/mrhansamala/RED-FOX-MD/fork"> <img src="https://img.shields.io/badge/Fork%20Cuenta-red?style=for-the-badge&logo=Fork" width="220" height="38.45"/></a></p>
 
-<a href='https://github.com/mrhansamala/RED-FOX-MD/fork' target="_blue"><img alt='Fork repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
 #### Get Creds Json
 
