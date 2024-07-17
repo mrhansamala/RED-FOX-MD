@@ -36,12 +36,6 @@
 <p align="center"><a href="https://github.com/mrhansamala/RED-FOX-MD/fork"> <img src="https://img.shields.io/badge/Fork-red?style=for-the-badge&logo=Fork" width="220" height="38.45"/></a></p>
 
 
-#### Get Creds Json
-
-<a href='https://replit.com/@MusicParadise/RED-FOX-MD?v=1' target="_blank"><img alt='SESSION ID' src='https://img.shields.io/badge/Creds_json-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
-
- You will get pair code when you run the above replit. After scanning pair code you will get  `creds.json` file in your personal chat, upload it to the  `session folder` in your project directory. 
-
 
 #### Get Session ID
 
@@ -51,19 +45,6 @@ You will get pair code when you run the above replit. After scanning pair code y
 
 
 
-<h2 align="center"> 🚀 Recommend 🚀
-</h2>
-
-👾WhatsApp bot works no matter what you do.🤖
-```js  
-   
-   /*
- You can use your WhatsApp bot at a much faster speed by applying creds.json than the session id.
-  }      
-    */
-   
-```
-<br>
 
  ##  Deploy Methods
      
