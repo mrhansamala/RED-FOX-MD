@@ -2,10 +2,10 @@
   "name": "Red-Fox-MD",
   "version": "10.8.1",
   "description": "latest multi device whatsapp bot",
-  "main": "src/index.js",
+  "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name Red-Fox-MD"
+    "start": "pm2 start main.js --deep-monitoring --attach --name Red-Fox-MD"
   },
   "keywords": ["mrhansamala", "whatsapp-bot", "whatsapp md bot"],
   "author": "Mr-Hansamala",
