@@ -78,7 +78,7 @@ async function downloadSessionData(sessionId, credsPath) {
 
 async function startSession(sessionId) {
     const sessionDir = path.join(sessionRootDir, sessionId);
-    const credsPath = path.join(sessionDir, './session/creds.json');
+    const credsPath = path.join(sessionDir, 'creds.json');
 
     if (!fs.existsSync(sessionDir)) {
         fs.mkdirSync(sessionDir, { recursive: true });
