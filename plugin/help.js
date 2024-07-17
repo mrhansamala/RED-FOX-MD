@@ -107,13 +107,6 @@ header: proto.Message.InteractiveMessage.Header.create({
     }),
 nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
   buttons: [
-      {
-      name: "cta_url",
-      buttonParamsJson: JSON.stringify({
-        display_text: "ᴊᴏɪɴ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ",
-        url: `https://whatsapp.com/channel/0029Vaej5TsAe5Vxx0getx1Z`
-      })
-    },
     {
       name: "quick_reply",
       buttonParamsJson: JSON.stringify({
@@ -124,10 +117,17 @@ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
        {
           name: "quick_reply",
           buttonParamsJson: JSON.stringify({
-          display_text: "ᴀʟɪᴠᴇ ɴᴏᴡ",
-          id: ".alive"
+          display_text: "ᴄᴏɴᴛᴀᴄᴛ ɴᴏᴡ",
+          id: ".owner"
                   })
                 },
+      {
+      name: "cta_url",
+      buttonParamsJson: JSON.stringify({
+        display_text: "ᴊᴏɪɴ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ",
+        url: `https://whatsapp.com/channel/0029Vaej5TsAe5Vxx0getx1Z`
+      })
+    },
     {
       "name": "single_select",
       "buttonParamsJson": `{"title":"ꜱᴇʟᴇᴄᴛ ᴍᴇɴᴜ",
