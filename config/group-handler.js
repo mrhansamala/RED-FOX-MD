@@ -1,6 +1,6 @@
 
 import moment from 'moment-timezone';
-import config from './config.cjs';
+import config from '../config.cjs';
 export default async function GroupParticipants(sock, { id, participants, action }) {
    try {
       const metadata = await sock.groupMetadata(id)
