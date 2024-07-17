@@ -12,7 +12,7 @@ import {
     useMultiFileAuthState,
     getAggregateVotesInPollMessage
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './src/event/index.js';
+import { Handler, Callupdate, GroupUpdate } from './config/index.js';
 import { Boom } from '@hapi/boom';
 import express from 'express';
 import pino from 'pino';
