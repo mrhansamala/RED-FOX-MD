@@ -1,4 +1,4 @@
-import ytdl from 'ytdl-core';
+import ytdl from '@distube/ytdl-core';
 import yts from 'yt-search';
 
 const video = async (m, Matrix) => {
