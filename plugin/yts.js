@@ -1,5 +1,5 @@
 import yts from 'yt-search';
-import ytdl from 'ytdl-core';
+import ytdl from '@distube/ytdl-core';
 import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
 
