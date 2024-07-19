@@ -1,6 +1,6 @@
 import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
 const { generateWAMessageFromContent, proto } = pkg;
-import pkgg from 'nayan-media-downloader';
+import getFBInfo from '@xaviabot/fb-downloader';
 const { ndown } = pkgg;
 
 
