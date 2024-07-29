@@ -1,6 +1,6 @@
 {
-  "name": "RedFox",
-  "version": "0.0.1",
+  "name": "red-fox-md",
+  "version": "1.0.0",
   "description": "latest multi device whatsapp bot",
   "main": "main.js",
   "type": "module",
