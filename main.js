@@ -1,30 +1,23 @@
+
 import dotenv from 'dotenv';
 dotenv.config();
 
 import {
     makeWASocket,
     Browsers,
-    jidDecode,
-    makeInMemoryStore,
-    makeCacheableSignalKeyStore,
     fetchLatestBaileysVersion,
     DisconnectReason,
     useMultiFileAuthState,
-    getAggregateVotesInPollMessage
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './config//index.js';
-import { Boom } from '@hapi/boom';
+import { Handler, Callupdate, GroupUpdate } from './config/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
 import NodeCache from 'node-cache';
 import path from 'path';
 import chalk from 'chalk';
-import { writeFile } from 'fs/promises';
 import moment from 'moment-timezone';
 import axios from 'axios';
-import fetch from 'node-fetch';
-import * as os from 'os';
 import config from './config.cjs';
 import pkg from './lib/autoreact.cjs';
 const { emojis, doReact } = pkg;
@@ -33,8 +26,7 @@ const sessionName = "session";
 const app = express();
 const orange = chalk.bold.hex("#FFA500");
 const lime = chalk.bold.hex("#32CD32");
-let useQR;
-let isSessionPutted;
+let useQR = false;
 let initialConnection = true;
 const PORT = process.env.PORT || 3000;
 
@@ -45,13 +37,6 @@ const logger = MAIN_LOGGER.child({});
 logger.level = "trace";
 
 const msgRetryCounterCache = new NodeCache();
-
-const store = makeInMemoryStore({
-    logger: pino().child({
-        level: 'silent',
-        stream: 'store'
-    })
-});
 
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
@@ -65,8 +50,8 @@ if (!fs.existsSync(sessionDir)) {
 
 async function downloadSessionData() {
     if (!config.SESSION_ID) {
-        console.error('Please add your session to SESSION_ID env !!');
-        process.exit(1);
+        console.error('🛠️⚙️Please add your session to SESSION_ID env ‼️');
+        return false;
     }
     const sessdata = config.SESSION_ID.split("Red_Fox-MD:/")[1];
     const url = `https://pastebin.com/raw/${sessdata}`;
@@ -74,54 +59,48 @@ async function downloadSessionData() {
         const response = await axios.get(url);
         const data = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
         await fs.promises.writeFile(credsPath, data);
-        console.log("🔒 Session Successfully Loaded !!");
+        console.log("🔐 Session Successfully Loaded !!⏳");
+        return true;
     } catch (error) {
-        console.error('Failed to download session data:', error);
-        process.exit(1);
+       // console.error('Failed to download session data:', error);
+        return false;
     }
-}
-
-if (!fs.existsSync(credsPath)) {
-    downloadSessionData();
 }
 
 async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🦊Red-Fox🦊 using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🦊using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Fox = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
-            printQRInTerminal: true,
-            browser: ["RED-FOX-MD", "safari", "3.3"],
+            printQRInTerminal: useQR,
+            browser: ["Red--MD", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "♻️Nonstop Testing♻️" };
+                return { conversation: "⏳Testing⏳" };
             }
         });
 
         Fox.ev.on('connection.update', (update) => {
             const { connection, lastDisconnect } = update;
             if (connection === 'close') {
-                if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+                if (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut) {
                     start();
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("Successful️ ✅"));
-                    Fox.sendMessage(Fox.user.id, { text: `🦊ʀᴇᴅ-ꜰᴏx-ᴍᴅ ᴅᴇᴠᴏʟᴏᴘɪɴɢ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟ* 
-> ᴅᴇᴠᴏʟᴘᴇʀ ɴᴜᴍʙᴇʀ :- 94781708673
-> ᴅᴇᴠᴏʟᴘᴇʀ ɴᴀᴍᴇ :- ᴍʀ ʜᴀɴꜱᴀᴍᴀʟᴀ
-> ɢɪᴛʜᴜʙ :- https://github.com/mrhansamala/RED-FOX-MD.git` });
+                    console.log(chalk.green("🦊Successful️ ✅"));
+                    Fox.sendMessage(Fox.user.id, { text: `🦊Red Fox MD Bot Deploy Successful️ ✅` });
                     initialConnection = false;
                 } else {
-                    console.log(chalk.blue("♻️ Connection reestablished after restart.♻️"));
+                    console.log(chalk.blue("♻️ Connection reestablished after restart.🦊"));
                 }
             }
         });
@@ -158,12 +137,29 @@ async function start() {
     }
 }
 
-start();
+async function init() {
+    if (fs.existsSync(credsPath)) {
+        console.log("🛠️ Session ID found📛");
+        await start();
+    } else {
+        const sessionDownloaded = await downloadSessionData();
+        if (sessionDownloaded) {
+            console.log("🔑 Session downloaded, starting bot.�🔓");
+            await start();
+        } else {
+            console.log("🔐No session found or downloaded⚙️");
+            useQR = true;
+            await start();
+        }
+    }
+}
+
+init();
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`✨️✨Server is running on port ${PORT}`);
 });
