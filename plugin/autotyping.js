@@ -1,4 +1,4 @@
-import config from '../../config.cjs';
+import config from '../config.cjs';
 
 const autotypingCommand = async (m, Fox) => {
   const botNumber = await Fox.decodeJid(Fox.user.id);
