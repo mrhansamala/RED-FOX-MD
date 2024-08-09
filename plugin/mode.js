@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import config from '../../config.cjs';
+import config from '../config.cjs';
 
 const modeCommand = async (m, Fox) => {
     const botNumber = await Fox.decodeJid(Fox.user.id);
