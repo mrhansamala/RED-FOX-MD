@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import fs from 'fs';
-import { getRandom } from '../../lib/myfunc.cjs';  // Assuming you have a utility function for generating random file names
+import { getRandom } from '../lib/myfunc.cjs';  // Assuming you have a utility function for generating random file names
 
 const audioEffects = async (m, gss) => {
   try {
