@@ -1,4 +1,4 @@
-import { dBinary } from '../../lib/binary.cjs';
+import { dBinary } from '../lib/binary.cjs';
 
 const dbinary = async (m, gss) => {
 const prefixMatch = m.body.match(/^[\\/!#.]/);
