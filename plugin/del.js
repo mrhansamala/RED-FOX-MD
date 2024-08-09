@@ -1,4 +1,4 @@
-import config from '../../config.cjs';
+import config from '../config.cjs';
 
 const deleteMessage = async (m, gss) => {
   try {
