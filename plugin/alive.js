@@ -90,7 +90,7 @@ const test = async (m, Fox) => {
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
               text: `┏━━━━━━━━━━━━━━┈⊷
-              •ᴀʟɪᴠᴇ ɴᴏᴡ•
+              *•ALIVE NOW SHANI•*
               
 > 📅 ᴜᴘᴛɪᴍᴇ: ${uptime}
 > 📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
@@ -99,7 +99,7 @@ const test = async (m, Fox) => {
 ┗━━━━━━━━━━━━━┈⊷  `
 }),
 footer: proto.Message.InteractiveMessage.Footer.create({
-  text: "> ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ"
+  text: "> SHANI-MD"
 }),
 header: proto.Message.InteractiveMessage.Header.create({
     ...(await prepareWAMessageMedia({ image : fs.readFileSync('../../media/red-alive.png')}, { upload: Fox.waUploadToServer})), 
@@ -113,8 +113,8 @@ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
       {
       name: "cta_url",
       buttonParamsJson: JSON.stringify({
-        display_text: "Join Our Community",
-        url: `https://whatsapp.com/channel/0029Vaej5TsAe5Vxx0getx1Z`
+        display_text: "Join Our Group",
+        url: `https://chat.whatsapp.com/BNE0V8XpEZK0q4IgJ9jklM`
       })
     },
     {
@@ -129,8 +129,8 @@ nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
       "buttonParamsJson": `{"title":"🌟ꜱᴛᴀʀ⭐ʀᴀᴛᴇ🌟",
      "sections":
        [{
-        "title":"🧛ᴍʀ-ʜᴀɴꜱᴀᴍᴀʟᴀ🧛",
-        "highlight_label":"🦊ʀᴇᴅ-ꜰᴏx🦊",
+        "title":"🐥🅢𝐇𝐀𝐍𝐈 🅜𝐃⁹⁹⁴🐥",
+        "highlight_label":"SHANI_MD",
         "rows":[
         {
 "header":"",
@@ -198,7 +198,7 @@ Have a nice day and see you again with a new update ✨
             },
             message: {
                 contactMessage: {
-                    displayName: `🦊ʀᴇᴅ-ꜰᴏx-ᴍᴅ🦊`,
+                    displayName: `🅢𝐇𝐀𝐍𝐈 🅜𝐃⁹⁹⁴`,
                     vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'FOX'\nitem1.TEL;waid=${
                         m.sender.split("@")[0]
                     }:${
