@@ -71,7 +71,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🦊using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🔋using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Fox = makeWASocket({
             version,
@@ -96,11 +96,11 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("🦊Successful️ ✅"));
-                    Fox.sendMessage(Fox.user.id, { text: `🦊Red Fox MD Bot Deploy Successful️ ✅` });
+                    console.log(chalk.green("🔋Successful️ 🥵"));
+                    Fox.sendMessage(Fox.user.id, { text: `🔋SHANI MD Bot Deploy Successful️ 🐿️` });
                     initialConnection = false;
                 } else {
-                    console.log(chalk.blue("♻️ Connection reestablished after restart.🦊"));
+                    console.log(chalk.blue("♻️ Connection reestablished after restart.🐿️"));
                 }
             }
         });
