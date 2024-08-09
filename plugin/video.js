@@ -35,7 +35,7 @@ const video = async (m, Fox) => {
 
             const videoInfo = await yts({ videoId: ytdl.getURLVideoID(text) });
     
-            await Fox.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ' }, { quoted: m });
+            await Fox.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> ©ʀᴇᴅ-sʜᴀɴɪ-ᴍᴅ' }, { quoted: m });
             await m.React("✅");
           } catch (err) {
             console.error('Error sending video:', err);
@@ -67,7 +67,7 @@ const video = async (m, Fox) => {
           try {
             const finalVideoBuffer = Buffer.concat(videoBuffer);
           
-            await Fox.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> ©ʀᴇᴅ-ꜰᴏx-ᴍᴅ' }, { quoted: m });
+            await Fox.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> ©ʀᴇᴅ-sʜᴀɴɪ-ᴍᴅ' }, { quoted: m });
             await m.React("✅");
           } catch (err) {
             console.error('Error sending video:', err);
