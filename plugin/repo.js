@@ -3,7 +3,7 @@ const { generateWAMessageFromContent, proto } = pkg;
 import axios from 'axios'; // Import axios for HTTP requests
 
 const handleRepoCommand = async (m, Fox) => {
-  const repoUrl = 'https://api.github.com/repos/mrhansamala/RED-FOX-MD';
+  const repoUrl = 'https://github.com/Numberfake794/RED-FOX-MD/tree/main';
   try {
     const response = await axios.get(repoUrl);
     const repoData = response.data;
@@ -65,8 +65,8 @@ const handleRepoCommand = async (m, Fox) => {
                 {
                   name: "cta_url",
                   buttonParamsJson: JSON.stringify({
-                    display_text: "ᴊᴏɪɴ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ",
-                    url: `https://whatsapp.com/channel/0029Vaej5TsAe5Vxx0getx1Z`
+                    display_text: "ᴊᴏɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ",
+                    url: `https://chat.whatsapp.com/BNE0V8XpEZK0q4IgJ9jklM`
                   })
                 }
               ],
