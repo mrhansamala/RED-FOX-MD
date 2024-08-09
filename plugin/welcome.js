@@ -1,4 +1,4 @@
-import config from '../../config.cjs';
+import config from '../config.cjs';
 
 const gcEvent = async (m, Fox) => {
   const prefixMatch = m.body.match(/^[\\/!#.]/);
